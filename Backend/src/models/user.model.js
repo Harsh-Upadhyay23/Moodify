@@ -12,5 +12,10 @@ const userSchema=new mongoose.Schema({
         required:[true , "Email is required"],
         unique:[true,"Email must be unique"]
     },
-    pas
+    password:{
+        type:String,
+        required:[true,"password is required"]
+    }
 })
+
+const userModel=mongoose.model("User",userSchema)
